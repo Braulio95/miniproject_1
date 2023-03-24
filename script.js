@@ -22,7 +22,9 @@ function getRandomColor () {
 
   function getCouncilAndRandomColorBackground(){
     getCouncil();
-    setTimeout(background.style.backgroundColor = getRandomColor(),2000)
+    setTimeout(()=>{
+        background.style.backgroundColor = getRandomColor()
+    },500);
     
 
   }
