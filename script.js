@@ -20,13 +20,15 @@ function getRandomColor () {
     return `rgb(${r}, ${g}, ${b})`;
   };
 
-  function getCouncilAndRandomColorBackground(){
+function getCouncilAndRandomColorBackground(){
     getCouncil();
     setTimeout(()=>{
         background.style.backgroundColor = getRandomColor()
     },500);
-    
-
   }
 
+function twitterPost(){
+    const twurl = `https://twitter.com/intent/tweet?url=${quote.innerHTML}`;
+    window.open(twurl,"_blank")
+}
 getCouncil();
